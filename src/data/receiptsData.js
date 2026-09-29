@@ -1,0 +1,50 @@
+export const receipts = [
+  {
+    id: 1,
+    title: "Thank you!",
+    subtitle: "Your ticket has been issued\nsuccessfully",
+    icon: "🎟️️",
+    idLabel: "TICKET ID",
+    idValue: "0128034399434",
+    amount: "$99.99",
+    dateTime: "19 Aug 2026 - 20:17",
+    status: "CONFIRMED",
+    user: "Usman Shams",
+    cardLast4: "8237",
+    cardType: "mastercard",
+    type: "barcode",
+    code: "2 8937261 273610"
+  },
+  {
+    id: 2,
+    title: "Apple Store",
+    subtitle: "Fifth Avenue • New York\nReceipt #AP-9842104",
+    icon: "",
+    idLabel: "ORDER NO",
+    idValue: "W984210491823",
+    amount: "$1,199.00",
+    dateTime: "19 Aug 2026 - 20:17",
+    status: "PAID IN FULL",
+    user: "Usman Shams",
+    cardLast4: "9012",
+    cardType: "Apple Pay",
+    type: "qr",
+    qrUrl: "https://www.apple.com/receipt/AP-9842104"
+  },
+  {
+    id: 3,
+    title: "Artisan Roasters",
+    subtitle: "Fresh Brew & Bakery\nTable #08 - Order Ready",
+    icon: "☕",
+    idLabel: "RECEIPT #",
+    idValue: "CF-84920418",
+    amount: "$14.50",
+    dateTime: "19 Aug 2026 - 20:17",
+    status: "SERVED",
+    user: "Usman Shams",
+    cardLast4: "4192",
+    cardType: "VISA",
+    type: "qr",
+    qrUrl: "https://artisanroasters.com/order/CF-84920418"
+  }
+];

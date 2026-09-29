@@ -1,0 +1,220 @@
+/* Layout & Container */
+.receipt-wrapper {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 80px;
+  background-color: #111827;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Blurred Background Image Overlay */
+.bg-blur-container {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center;
+  filter: blur(14px) brightness(0.5);
+  z-index: 1;
+}
+
+.printer-container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hardware Slot */
+.printer-slot {
+  position: relative;
+  z-index: 20;
+  width: 360px;
+  height: 40px;
+  background: linear-gradient(to right, #d97706, #eab308, #b45309);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+  border-bottom: 4px solid #78350f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.slot-light {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #34d399;
+  box-shadow: 0 0 8px rgba(52, 211, 153, 0.8);
+  animation: pulse 1.5s infinite;
+}
+
+.slot-bar {
+  width: 256px;
+  height: 8px;
+  background-color: #171717;
+  border-radius: 9999px;
+  border: 1px solid #404040;
+}
+
+.slot-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #78350f;
+}
+
+/* Dispensing Area Container */
+.paper-mask {
+  position: relative;
+  width: 340px;
+  overflow: hidden;
+  padding-top: 4px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Receipt Paper Card */
+.ticket-card {
+  width: 320px;
+  background-color: #ffffff;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.4);
+  padding: 24px;
+  color: #1f2937;
+  border-top: 2px dashed #e5e7eb;
+  box-sizing: border-box;
+}
+
+.ticket-header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.ticket-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #fef3c7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 8px;
+  font-size: 20px;
+}
+
+.ticket-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  color: #111827;
+}
+
+.ticket-subtitle {
+  font-size: 12px;
+  color: #9ca3af;
+  white-space: pre-line;
+  margin-top: 4px;
+}
+
+.ticket-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 12px;
+  padding: 12px 0;
+  border-top: 1px dashed #e5e7eb;
+  border-bottom: 1px dashed #e5e7eb;
+  font-size: 12px;
+}
+
+.ticket-label {
+  color: #9ca3af;
+  display: block;
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.ticket-value {
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.ticket-amount {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.ticket-status {
+  background-color: #d1fae5;
+  color: #047857;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+.ticket-user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px 0;
+  font-size: 12px;
+}
+
+.ticket-footer {
+  margin-top: 16px;
+  padding-top: 8px;
+  text-align: center;
+  border-top: 1px solid #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qr-wrapper {
+  padding: 6px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.barcode-lines {
+  height: 40px;
+  width: 100%;
+  background: repeating-linear-gradient(
+    90deg,
+    #000 0px,
+    #000 2px,
+    transparent 2px,
+    transparent 4px,
+    #000 4px,
+    #000 7px,
+    transparent 7px,
+    transparent 9px
+  );
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
